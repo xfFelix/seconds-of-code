@@ -12,6 +12,7 @@ export default defineConfig({
       { text: 'JS', link: '/js/addMinutesToDate' },
       { text: 'Interview', link: '/interview/bigFileUpload' },
       { text: 'Question', link: '/question/destructuringAssignment' },
+      { text: '其他', link: '/other/charles' },
     ],
 
     sidebar: {
@@ -162,6 +163,12 @@ export default defineConfig({
         },
       ],
       '/question/': [{ text: 'object undefined is not iterable', link: '/question/destructuringAssignment' }],
+      '/other/': [
+        {
+          text: 'charles抓包',
+          link: '/other/charles',
+        },
+      ],
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
