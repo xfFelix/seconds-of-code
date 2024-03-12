@@ -1,6 +1,6 @@
 # charles 抓包
 
-操作系统： macbook
+操作系统： MacBook
 
 ## 1. 安装 charles
 
@@ -82,8 +82,45 @@ brew install charles
 
 ![cert](/images/charles/11.png)
 
+## 问题
+
+### charles 破解
+
+默认的 charles 是有免费使用期限的，大约是 30 天，而且会一直提示，这里教大家一个方式，免费破解 charles，自己购买许可证也行，大概要 50 美元，所以大家懂的
+
+进入 `help` 下的第一个菜单 `register...`, 然后按照以下操作
+
+```
+生成注册码地址:https://www.charles.ren/
+
+Registered Name: https://zhile.io
+License Key: 48891cf209c6d32bf4
+```
+
+成功之后重启，发现 `register` 变成以下模样
+
+![cert](/images/charles/12.png)
+
+### 部分 APP 无法代理抓包的原因及解决方法
+
+我们在一些 app 上发现抓包无效，好像 app 发现了我们是通过接口调用的，其实是因为证书的原因，我们在上面移动端安装证书的时候，证书安装的位置是处于用户级别，不是系统级别的，所以 app 才能识别的到证书不对。具体原理参考底下文案，我这里直接给我解决方案，经测试，有用。
+
+方案就是采用 VPN 代理的方式，这里以 iphone 为例，每个程序猿的手机上必定有代理工具，我这里以 小火箭 🚀(`Shadowrocket`)为例：
+
+1. 选择全局路由为「代理」
+2. 添加服务节点（类型选择 `HTTP` 及 `HTTPS` ，服务器地址及端口为您代理抓包工具的地址与端口）
+3. 设置状态为启用 （IOS 会同时自动创建 VPN）
+
+![cert](/images/charles/13.png)
+
+现在直接打开 `iphone` 上的任意 `APP`（不用再在 wifi 上重复设置代理） ，既可以在代理抓包工具上看到流量了
+
 ## 参考链接
 
 [小程序抓包流程](https://dev.weixin.qq.com/docs/gateway/snifferpacket.html)
 
 [Charles 抓 https 包显示＜ unknown ＞](https://blog.csdn.net/ios_xumin/article/details/122218974)
+
+[Charles 的注册码/破解](https://cloud.tencent.com/developer/article/1883862)
+
+[部分 APP 无法代理抓包的原因及解决方法（flutter 抓包）](https://www.cnblogs.com/lulianqi/p/11380794.html)
