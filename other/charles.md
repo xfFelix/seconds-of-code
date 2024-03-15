@@ -115,6 +115,10 @@ License Key: 48891cf209c6d32bf4
 
 现在直接打开 `iphone` 上的任意 `APP`（不用再在 wifi 上重复设置代理） ，既可以在代理抓包工具上看到流量了
 
+### 微信/抖音等 APP 无法抓包
+
+这是因为微信和抖音对于证书做了加密处理，详情可以在网上搜索 `SSL Spinning`, 没有好的解决方案，网上的方案都是对于源码进行处理，这不是废话吗，我要是有源码，我还抓包干啥。
+
 ## 参考链接
 
 [小程序抓包流程](https://dev.weixin.qq.com/docs/gateway/snifferpacket.html)
