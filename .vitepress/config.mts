@@ -10,7 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'JS', link: '/js/addMinutesToDate' },
-      { text: 'Interview', link: '/interview/bigFileUpload' },
+      { text: 'Interview', link: '/interview/spread' },
       { text: 'Question', link: '/question/destructuringAssignment' },
       { text: '其他', link: '/other/charles' },
     ],
@@ -95,6 +95,10 @@ export default defineConfig({
         {
           text: 'Interview',
           items: [
+            {
+              text: '实现 var [a, b] = {a: 1, b: 2}',
+              link: '/interview/spread',
+            },
             {
               text: '大文件上传',
               link: '/interview/bigFileUpload',
