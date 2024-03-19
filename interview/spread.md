@@ -50,7 +50,11 @@ console.log(arr.__proto__[Symbol.iterator]()) // Object [Array Iterator] {}
 它返回的是一个对象类型，并且是一个迭代器对象！！！所以一个可迭代对象的基本结构是这样的：
 
 ```js
-interable { [Symbol.iterator]: function () { return 迭代器 (可通过next()就能读取到值) } }
+interable {
+  [Symbol.iterator]: function () {
+    return 迭代器 (可通过next()就能读取到值)
+  }
+}
 ```
 
 我们可以得出只要一个数据结构身上，具有`[Symbol.iterator]`这样一个属性，且值是一个函数体，可以返回一个迭代器的话，我们就称这个数据结构是可迭代的。
